@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/adminempl.css">
+    <!--<link rel="stylesheet" href="./css/index.css">-->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCS Inventory</title>
+    <script id="itemCRUDscript" type= "text/javascript" src="./scripts/itemCRUD.js"></script>
+</head>
+<body>
+   <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--> 
+    
+    <button type="button" class="back_button" onclick="goBack()">Back</button> 
+    
+    <h2>Admin Access</h2>
+      <h1><center>Item Override</center></h1>
+
+      <button class = "regular_button" onclick="createItemPopup()">Create</button>
+      <button class = "regular_button" onclick="editItemPopup()">Edit</button>
+      <button class = "regular_button" onclick="deleteItemPopup()">Delete</button>
+
+    <div id = "createModal" class = "modal">
+        <div class = "modal-content_data">
+            <span class = "close" onclick = "closePopout(0)">&times;</span>
+            <form onsubmit="return false" method="POST">
+                <label class="bold" for="createName">Item Name:</label>
+                <input type="text" name="createName" id="createName"><br><br>
+                <input type="button" value="Add" onclick="addItem()">
+            </form>
+        </div>
+    </div>
+
+    <div id = "editModal" class = "modal">
+        <div class = "modal-content_data">
+            <span class = "close" onclick = "closePopout(1)">&times;</span>
+            <form onsubmit="return false" method="PUT">
+                <label class="bold" for="userid">Choose an ItemID:</label>
+                <select class="itemid_data" name="itemid" id="itemid_edit">
+                    
+                </select><br><br>
+                <label class="bold" for="editName">Item Name:</label>
+                <input type="text" name="editName" id="editName"><br><br>
+                <label class="bold" for="editStatus">Item Status:</label>
+                <select name="editStatus" id="editStatus">
+                    <option value="GOOD">Good</option>
+                    <option value="FAIR">Fair</option>
+                    <option value="POOR">Poor</option>
+                    <option value="NEW">New</option>
+                </select><br><br>
+                <label class="bold" for="isCheckedOut">Is the Item Checked Out?</label>
+                <select name="isCheckedOut" id="isCheckedOut">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select><br><br>
+                <input type="button" value="Edit" onclick="editItem()">
+            </form>
+        </div>
+    </div>
+
+    <div id = "deleteModal" class = "modal">
+        <div class = "modal-content_data">
+            <span class = "close" onclick = "closePopout(2)">&times;</span>
+            <form onsubmit="return false" method="DELETE">
+                <label class="bold" for="itemid">Choose a ItemID:</label>
+                <select class="itemid_data" name="itemid" id="itemid_delete">
+                    
+                </select><br><br>
+                <input type="button" value="Delete" onclick="deleteItem()">
+            </form>
+        </div>
+    </div>
+
+    <!--Latest bootstrap jQuery-->
+   <!--<script src="https://code.jquery.com/jquery-latest.js"></script>--> 
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/adminempl.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCS Inventory</title>
+    <script id="reportscript" type= "text/javascript" src="./scripts/adminreports.js"></script>
+</head>
+<body onload="onLoad()">
+    
+    <h2>Admin Access</h2>
+      <h1><center>Current Report</center></h1>
+
+    <center><form onsubmit="return false" method="POST">
+        <label class="bold" for="emplsearch">Search a User:</label>
+        <select name="emplsearch" id="emplsearch">
+                
+        </select>
+        <input type="button" value="Search" onclick="filterCheckedOut()">
+    </form>
+    
+    <div id="coitems">
+  
+    </div></center>
+
+</body>
+</html>

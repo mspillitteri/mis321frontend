@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/adminempl.css">
+    <!--<link rel="stylesheet" href="./css/index.css">-->
+   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">--> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCS Inventory</title>
+    <script id="checkoutCRUDscript" type= "text/javascript" src="./scripts/checkoutCRUD.js"></script>
+</head>
+<body>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    
+    <button type="button" class="back_button" onclick="goBack()">Back</button> 
+    
+    <h2>Admin Access</h2>
+      <h1><center>Checkout Override</center></h1>
+
+      <button class = "regular_button" onclick="createCheckoutPopup()">Create</button>
+      <button class = "regular_button" onclick="editCheckoutPopup()">Edit</button>
+      <button class = "regular_button" onclick="deleteCheckoutPopup()">Delete</button>
+
+    <div id = "createModal" class = "modal">
+        <div class = "modal-content_data">
+            <span class = "close" onclick = "closePopout(0)">&times;</span>
+            <form onsubmit="return false" method="POST">
+                <label class="bold" for="itemid">Choose the Item Being Checked Out:</label>
+                <select class="checkout_itemid_data" name="itemid" id="checkout_itemid_create">
+                    
+                </select><br><br>
+                <label class="bold" for="userid">Select the User who is Checking Out:</label>
+                <select class="checkout_userid_data" name="userid" id="checkout_userid_create">
+                    
+                </select><br><br>
+                <input type="button" value="Add" onclick="addCheckout()">
+            </form>
+        </div>
+    </div>
+
+    <div id = "editModal" class = "modal">
+        <div class = "modal-content_data">
+            <span class = "close" onclick = "closePopout(1)">&times;</span>
+            <form onsubmit="return false" method="PUT">
+                <label class="bold" for="checkoutid">Choose a CheckoutID:</label>
+                <select class="checkoutid_data" name="checkoutid" id="checkoutid_edit">
+                    
+                </select><br><br>
+                <label class="bold" for="itemid">Choose an ItemID:</label>
+                <select class="checkout_itemid_data" name="itemid" id="checkout_itemid_edit">
+                    
+                </select><br><br>
+                <label class="bold" for="userid">Choose a UserID:</label>
+                <select class="checkout_userid_data" name="userid" id="checkout_userid_edit">
+                    
+                </select><br><br>
+                <label class="bold" for="checkoutime">Checkout Time:</label>
+                <input type="text" name="checkouttime" id="checkout_checkouttime_edit">
+                <label>(Type as YYYY:MM:DD)</label><br><br>
+                <label class="bold" for="checkoutime">Due Date:</label>
+                <input type="text" name="checkouttime" id="checkout_duedate_edit">
+                <label>(Type as YYYY:MM:DD)</label><br><br>
+                <label class="bold" for="isReturned">Is the Item Returned?</label>
+                <select name="isReturned" id="isReturned_edit">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select><br><br>
+                <input type="button" value="Edit" onclick="editCheckout()">
+            </form>
+        </div>
+    </div>
+
+    <div id = "deleteModal" class = "modal">
+        <div class = "modal-content_data">
+            <span class = "close" onclick = "closePopout(2)">&times;</span>
+            <form onsubmit="return false" method="DELETE">
+                <label class="bold" for="checkoutid">Choose a CheckoutID:</label>
+                <select class="checkoutid_data" name="checkoutid" id="checkoutid_delete">
+                    
+                </select><br><br>
+                <input type="button" value="Delete" onclick="deleteCheckout()">
+            </form>
+        </div>
+    </div>
+
+    <!--Latest bootstrap jQuery-->
+    <!--<script src="https://code.jquery.com/jquery-latest.js"></script>-->
+
+</body>
+</html>

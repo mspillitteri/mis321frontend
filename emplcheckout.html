@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/checkreturn.css">
+   <!--<link rel="stylesheet" href="./css/index.css">--> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CCS Inventory</title>
+    <script id="emplscript" type= "text/javascript" src="./scripts/emplcheckout.js"></script>
+    <script id="emplwaitscript" type= "text/javascript" src="./scripts/emplWaitlist.js"></script>
+</head>
+<body onload="getItems()">
+    
+    <h2>General Access</h2>
+    <h3 id="welcomeuser"></h3>
+    <h1><center>CCS Inventory</center></h1>
+
+    <div id = "editModal" class = "modal">
+        <div class = "modal-content">
+            <span class = "close" onclick = "closePopout()">&times;</span>
+            <span id="emplWaitlist">
+                
+            </span>
+        </div>
+    </div>
+   
+<div id="items">
+  
+</div>
+
+</body>
+</html>
