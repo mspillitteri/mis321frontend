@@ -62,7 +62,7 @@ function getUserIDs() {
     }).then(function(json){
         let html = "";
         json.forEach((user)=>{
-            html += "<option value=\"" + user.userid + "\">" + user.userid;
+            html += "<option value=\"" + user.userfname + user.userlname + "\">" + user.userid;
             html += "; " + user.userfname + " " + user.userlname;
             html += "</option>";
         });
@@ -82,8 +82,10 @@ function filterCheckedOut() {
     }).then(function(json){
         let html = "<ul id=\"list\">";
         json.forEach((item)=>{
-            html += "<li class=\"flex\"><div class=\"picture\"></div>"; 
-            html += "&ensp;" + item.itemid + "&emsp;" + item.itemname + "&emsp;" + item.userfname + " " + item.userlname + "&emsp;" + (new Date(Date.parse(item.duedate))).toLocaleDateString('en-US');
+            if (filter == (item.userfname + item.userlname)) {
+                html += "<li class=\"flex\"><div class=\"picture\"></div>"; 
+                html += "&ensp;" + item.itemid + "&emsp;" + item.itemname + "&emsp;" + item.userfname + " " + item.userlname + "&emsp;" + (new Date(Date.parse(item.duedate))).toLocaleDateString('en-US');
+            }
         });
         html += "</ul>";
         document.getElementById("coitems").innerHTML = html;
