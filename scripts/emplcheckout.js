@@ -9,11 +9,13 @@ function getItems() {
         console.log(response);
         return response.json();
     }).then(function(json){
-        let html = "<table class=\"halfpage\">";
-        html += "<tr><th>Item Name</th><th>Item Condition</th></tr>";
+        let html = "<ul id=\"list\">";
         json.forEach((item)=>{
-            // html += "<li class=\"flex\"><div class=\"picture\"></div>"; 
-            html += "<tr><td>" + item.itemname + "</td><td>" + item.itemstatus + "</td></tr>";
+            //var topUser = getTopOfWaitlist(item.itemid);
+            //var hasWaitlist = waitlistCheck(item.itemid);
+            html += "<li class=\"flex\"><div class=\"picture\"></div>"; 
+            html += "<label>Item Name</label><label>Item Condition</label><br>"
+            html += "&ensp;" + item.itemname + "&emsp;" + item.itemstatus;
             if (item.ischeckedout == true) { 
                 //show if item is checked out
                 html += "<button class=\"buttons\" onclick=\"addWaitlist("+item.itemid+",\'"+userid+"')\">Join Waitlist</button>";
@@ -25,9 +27,9 @@ function getItems() {
                 html += "<button class=\"buttons\" onclick=\"addCheckout("+item.itemid+",\'"+userid+"')\">Checkout</button>";
                 html += "&nbsp;";
             }
-            html += "</tr>";
+            html += "</li><p></p>";
         });
-        html += "</table>";
+        html += "</ul>";
         document.getElementById("items").innerHTML = html;
     }).catch(function(error){
         console.log(error);

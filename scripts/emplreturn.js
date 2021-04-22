@@ -30,6 +30,7 @@ function getReturnItems(checkout) {
         return response.json();
     }).then(function(json){
         let html = "<ul id=\"list\">";
+        html += "<label>Item Name</label><label>Item Condition</label><br>"
         json.forEach((item)=>{
             if (item.ischeckedout && userid == checkout) {
                 html += "<li class=\"flex\"><div class=\"picture\"></div>"; 
