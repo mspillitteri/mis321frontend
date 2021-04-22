@@ -32,7 +32,7 @@ function getReturnItems(checkout) {
     }).then(function(json){
         let html = "<ul id=\"list\">";
         json.forEach((item)=>{
-            if (item.ischeckedout && userid == checkout) {
+            if (userid == checkout) {
                 html += "<li class=\"flex\"><div class=\"picture\"></div>"; 
                 html += "&ensp;" + item.itemname + "&emsp;" + item.itemstatus;
                 html += "<button class=\"buttons\"onclick=\"findCheckout("+item.itemid+")\">Return</button>";
