@@ -1,5 +1,6 @@
 function onLoad() {
     findUserCheckouts();
+    writeUserName();
 }
 
 function findUserCheckouts() {
