@@ -8,12 +8,13 @@
     <title>CCS Inventory</title>
     <script id="reportscript" type= "text/javascript" src="./scripts/dataoverride.js"></script>
 </head>
-<body>
+<body onload="writeUserName()">
 
     <button type="button" class="back_button" onclick="goBack()">Back</button> 
     
     <h2>Admin Access</h2>
-      <h1><center>CCS Inventory</center></h1>
+    <h3 id="welcomeuser"></h3>
+      <h1><center>Data Override</center></h1>
     
       <button class = "regular_button" onclick="adminUserCRUD()">User</button>
       <button class = "regular_button" onclick="adminItemCRUD()">Item</button>

@@ -10,12 +10,13 @@
     <title>CCS Inventory</title>
     <script id="waitlistCRUDscript" type= "text/javascript" src="./scripts/waitlistCRUD.js"></script>
 </head>
-<body>
+<body onload="writeUserName()">
    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--> 
     
     <button type="button" class="back_button" onclick="goBack()">Back</button> 
     
     <h2>Admin Access</h2>
+    <h3 id="welcomeuser"></h3>
       <h1><center>Waitlist Override</center></h1>
 
       <button class = "regular_button" onclick="createWaitlistPopup()">Create</button>

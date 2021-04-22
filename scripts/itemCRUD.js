@@ -31,7 +31,7 @@ function editItem() {
         isCheckedOut = true;
     }
 
-    const url = "https://localhost:5001/API/Item/" + itemid;
+    const url = "https://mis321-backend.herokuapp.com/API/Item/" + itemid;
 
     let values = {
         itemname: nameText,
@@ -58,7 +58,7 @@ function editItem() {
 function deleteItem() {
     var itemid = document.getElementById("itemid_delete").value;
 
-    const url = "https://localhost:5001/API/Item/" + itemid;
+    const url = "https://mis321-backend.herokuapp.com/API/Item/" + itemid;
 
     fetch(url, {
         method: "DELETE",
@@ -74,7 +74,7 @@ function deleteItem() {
 }
 
 function getItemIDs(i) {
-    const url = "https://localhost:5001/API/Item";
+    const url = "https://mis321-backend.herokuapp.com/API/Item";
 
     fetch(url).then(function(response){
         console.log(response);
@@ -115,4 +115,10 @@ function closePopout(i)
 
 function goBack() {
     history.back();
+}
+
+function writeUserName() {
+    const userName = localStorage.getItem("userName");
+    let html = "<p>Welcome " + userName + "</p>";
+    document.getElementById("welcomeuser").innerHTML = html;
 }

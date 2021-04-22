@@ -162,3 +162,9 @@ function closePopout(i)
 function goBack() {
     history.back();
 }
+
+function writeUserName() {
+    const userName = localStorage.getItem("userName");
+    let html = "<p>Welcome " + userName + "</p>";
+    document.getElementById("welcomeuser").innerHTML = html;
+}

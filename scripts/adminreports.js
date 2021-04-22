@@ -1,6 +1,7 @@
 function onLoad() {
     getCheckedOut();
     getUserIDs();
+    writeUserName();
 }
 
 function getInvItems() {
