@@ -13,7 +13,6 @@ function getInvItems() {
         return response.json();
     }).then(function(json){
         let html = "<ul id=\"list\">";
-        html += "<label>Item ID</label><label>Item Name</label><label>Item Condition</label><br>"
         json.forEach((item)=>{
             html += "<li class=\"flex\"><div class=\"picture\"></div>"; 
             html += "&ensp;" + item.itemid + "&emsp;" + item.itemname + "&emsp;" + item.itemstatus;

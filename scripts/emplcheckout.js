@@ -14,7 +14,6 @@ function getItems() {
             //var topUser = getTopOfWaitlist(item.itemid);
             //var hasWaitlist = waitlistCheck(item.itemid);
             html += "<li class=\"flex\"><div class=\"picture\"></div>"; 
-            html += "<label>Item Name</label><label>Item Condition</label><br>"
             html += "&ensp;" + item.itemname + "&emsp;" + item.itemstatus;
             if (item.ischeckedout == true) { 
                 //show if item is checked out
