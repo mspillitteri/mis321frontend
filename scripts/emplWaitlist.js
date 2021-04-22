@@ -6,7 +6,7 @@ function getWaitlist(itemid) {
     }).then(function(json){
        
         let html = "<table class=\"halfpage\">";
-        html += "<tr><th>WaitlistID</th><th>ItemID</th><th>UserID</th><th>         Name</th></tr>";
+        html += "<tr><th>WaitlistID</th><th>ItemID</th><th>UserID</th><th>" + "&ensp;" + "Name</th></tr>";
         json.forEach((waitlist)=>{
         if (waitlist.itemid == itemid) {
             html += "<tr><td>" + waitlist.waitlistid + "</td>"; 

@@ -113,13 +113,19 @@
   margin-right: 25px;
   size: 20px;
 }
-.bold{
+.search_bold{
   font-family: serif;
     color: white;
     font-size: 40px;
     align-items: center;
     margin-left: 25px;
     text-shadow: 3px 2px #4d0000;
+
+}
+
+.bold{
+  font-family: serif;
+    color: black;
 
 }
 /* The Modal (background) */
