@@ -3,7 +3,7 @@ function addWaitlist() {
     var itemid = parseInt(document.getElementById("waitlist_itemid_create").value);
     var userid = document.getElementById("waitlist_userid_create").value;
 
-    const url = "https://localhost:5001/API/Waitlist/" + userid;
+    const url = "https://mis321-backend.herokuapp.com/API/Waitlist/" + userid;
 
     let values = {
         itemid: itemid
@@ -28,7 +28,7 @@ function editWaitlist() {
     var itemid = document.getElementById("waitlist_itemid_edit").value;
     var userid = document.getElementById("waitlist_userid_edit").value;
 
-    const url = "https://localhost:5001/API/Waitlist/" + waitlistid + "/" + itemid + "/" + userid;
+    const url = "https://mis321-backend.herokuapp.com/API/Waitlist/" + waitlistid + "/" + itemid + "/" + userid;
 
     fetch(url, {
         method: "PUT",
@@ -46,7 +46,7 @@ function editWaitlist() {
 function deleteWaitlist() {
     var waitlistid = document.getElementById("waitlistid_delete").value;
 
-    const url = "https://localhost:5001/API/Waitlist/" + waitlistid;
+    const url = "https://mis321-backend.herokuapp.com/API/Waitlist/" + waitlistid;
 
     fetch(url, {
         method: "DELETE",
@@ -81,7 +81,7 @@ function deleteWaitlist() {
 // }
 
 function getOutgoingItemIDs(i) {
-    const url = "https://localhost:5001/API/Item";
+    const url = "https://mis321-backend.herokuapp.com/API/Item";
 
     fetch(url).then(function(response){
         console.log(response);
@@ -100,7 +100,7 @@ function getOutgoingItemIDs(i) {
 }
 
 function getUserIDs(i) {
-    const url = "https://localhost:5001/API/User";
+    const url = "https://mis321-backend.herokuapp.com/API/User";
 
     fetch(url).then(function(response){
         console.log(response);
@@ -117,7 +117,7 @@ function getUserIDs(i) {
 }
 
 function getWaitlistIDs(i) {
-    const url = "https://localhost:5001/API/Waitlist";
+    const url = "https://mis321-backend.herokuapp.com/API/Waitlist";
 
     fetch(url).then(function(response){
         console.log(response);

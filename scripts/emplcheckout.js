@@ -2,7 +2,7 @@ var waitlists = "";
 
 function getItems() {
     const userid = localStorage.getItem("userid");
-    const url = "https://localhost:5001/API/Item";
+    const url = "https://mis321-backend.herokuapp.com/API/Item";
     writeUserName();
 
     fetch(url).then(function(response){
@@ -36,7 +36,7 @@ function getItems() {
 }
 
 function addCheckout(currentItem, currentUser) {
-    const url = "https://localhost:5001/API/Checkout/" + currentUser;
+    const url = "https://mis321-backend.herokuapp.com/API/Checkout/" + currentUser;
 
     fetch(url, {
         method: "POST",
@@ -55,7 +55,7 @@ function addCheckout(currentItem, currentUser) {
 }
 
 function addWaitlist(currentItem, currentUser) {
-    const url = "https://localhost:5001/API/Waitlist/" + currentUser;
+    const url = "https://mis321-backend.herokuapp.com/API/Waitlist/" + currentUser;
 
     fetch(url, {
         method: "POST",
@@ -80,7 +80,7 @@ function writeUserName() {
 }
 
 function getTopOfWaitlist(itemid) {
-    const url = "https://localhost:5001/API/Waitlist";
+    const url = "https://mis321-backend.herokuapp.com/API/Waitlist";
     const userid = localStorage.getItem("userid");
 
     fetch(url).then(function(response){
@@ -99,7 +99,7 @@ function getTopOfWaitlist(itemid) {
 }
 
 function waitlistCheck(itemid) {
-    const url = "https://localhost:5001/API/Waitlist";
+    const url = "https://mis321-backend.herokuapp.com/API/Waitlist";
 
     fetch(url).then(function(response){
         console.log(response);
@@ -118,7 +118,7 @@ function waitlistCheck(itemid) {
 }
 
 function getWaitlists() {
-    const url = "https://localhost:5001/API/Waitlist";
+    const url = "https://mis321-backend.herokuapp.com/API/Waitlist";
 
     fetch(url).then(function(response){
         console.log(response);

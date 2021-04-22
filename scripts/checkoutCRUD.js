@@ -3,7 +3,7 @@ function addCheckout() {
     var itemid = parseInt(document.getElementById("checkout_itemid_create").value);
     var userid = document.getElementById("checkout_userid_create").value;
 
-    const url = "https://localhost:5001/API/Checkout/" + userid;
+    const url = "https://mis321-backend.herokuapp.com/API/Checkout/" + userid;
 
     let values = {
         itemid: itemid
@@ -36,7 +36,7 @@ function editCheckout() {
         isReturned = true;
     }
 
-    const url = "https://localhost:5001/API/Checkout/" + checkoutid;
+    const url = "https://mis321-backend.herokuapp.com/API/Checkout/" + checkoutid;
 
     let values = {
         itemid: itemid,
@@ -65,7 +65,7 @@ function editCheckout() {
 function deleteCheckout() {
     var checkoutid = document.getElementById("checkoutid_delete").value;
 
-    const url = "https://localhost:5001/API/Checkout/" + checkoutid;
+    const url = "https://mis321-backend.herokuapp.com/API/Checkout/" + checkoutid;
 
     fetch(url, {
         method: "DELETE",
@@ -81,7 +81,7 @@ function deleteCheckout() {
 }
 
 function getItemIDs(i) {
-    const url = "https://localhost:5001/API/Item";
+    const url = "https://mis321-backend.herokuapp.com/API/Item";
 
     fetch(url).then(function(response){
         console.log(response);
@@ -100,7 +100,7 @@ function getItemIDs(i) {
 }
 
 function getOutgoingItemIDs(i) {
-    const url = "https://localhost:5001/API/Item";
+    const url = "https://mis321-backend.herokuapp.com/API/Item";
 
     fetch(url).then(function(response){
         console.log(response);
@@ -120,7 +120,7 @@ function getOutgoingItemIDs(i) {
 
 function getUserIDs(i) {
     //const loggedInUser = localStorage.getItem("userid");
-    const url = "https://localhost:5001/API/User";
+    const url = "https://mis321-backend.herokuapp.com/API/User";
 
     fetch(url).then(function(response){
         console.log(response);
@@ -137,7 +137,7 @@ function getUserIDs(i) {
 }
 
 function getCheckoutIDs(i) {
-    const url = "https://localhost:5001/API/Checkout";
+    const url = "https://mis321-backend.herokuapp.com/API/Checkout";
 
     fetch(url).then(function(response){
         console.log(response);

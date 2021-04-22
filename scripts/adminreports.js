@@ -4,7 +4,7 @@ function onLoad() {
 }
 
 function getInvItems() {
-    const url = "https://localhost:5001/API/Item";
+    const url = "https://mis321-backend.herokuapp.com/API/Item";
     
     //writeUserName();
 
@@ -31,7 +31,7 @@ function writeUserName() {
 }
 
 function getCheckedOut() {
-    const url = "https://localhost:5001/API/CheckedOutItem";
+    const url = "https://mis321-backend.herokuapp.com/API/CheckedOutItem";
 
     fetch(url).then(function(response){
         console.log(response);
@@ -54,7 +54,7 @@ function goBack() {
 }
 
 function getUserIDs() {
-    const url = "https://localhost:5001/API/User";
+    const url = "https://mis321-backend.herokuapp.com/API/User";
 
     fetch(url).then(function(response){
         console.log(response);
@@ -74,7 +74,7 @@ function getUserIDs() {
 
 function filterCheckedOut() {
     var filter = document.getElementById("emplsearch").value;
-    const url = "https://localhost:5001/API/CheckedOutItem";
+    const url = "https://mis321-backend.herokuapp.com/API/CheckedOutItem";
 
     fetch(url).then(function(response){
         console.log(response);

@@ -1,5 +1,5 @@
 function getWaitlist(itemid) {
-    const url = "https://localhost:5001/API/Waitlist/" + itemid;
+    const url = "https://mis321-backend.herokuapp.com/API/Waitlist/" + itemid;
     fetch(url).then(function(response){
         console.log(response);
         return response.json();

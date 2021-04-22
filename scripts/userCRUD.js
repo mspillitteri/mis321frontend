@@ -1,5 +1,5 @@
 function addUser() {
-    const url = "https://localhost:5001/API/User";
+    const url = "https://mis321-backend.herokuapp.com/API/User";
     var emailText = document.getElementById("createEmail").value;
     var fNameText = document.getElementById("createFName").value;
     var lNameText = document.getElementById("createLName").value;
@@ -31,7 +31,7 @@ function editUser() {
     var lNameText = document.getElementById("editLName").value;
     var userStatus = parseInt(document.getElementById("userstatus").value);
 
-    const url = "https://localhost:5001/API/User/" + userid;
+    const url = "https://mis321-backend.herokuapp.com/API/User/" + userid;
 
     let values = {
         email: emailText,
@@ -59,7 +59,7 @@ function editUser() {
 function deleteUser() {
     var userid = document.getElementById("userid_delete").value;
 
-    const url = "https://localhost:5001/API/User/" + userid;
+    const url = "https://mis321-backend.herokuapp.com/API/User/" + userid;
 
     fetch(url, {
         method: "DELETE",
@@ -76,7 +76,7 @@ function deleteUser() {
 
 function getUserIDs(i) {
     const loggedInUser = localStorage.getItem("userid");
-    const url = "https://localhost:5001/API/User";
+    const url = "https://mis321-backend.herokuapp.com/API/User";
 
     fetch(url).then(function(response){
         console.log(response);

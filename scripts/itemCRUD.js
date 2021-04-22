@@ -1,5 +1,5 @@
 function addItem() {
-    const url = "https://localhost:5001/API/Item";
+    const url = "https://mis321-backend.herokuapp.com/API/Item";
     var nameText = document.getElementById("createName").value;
 
     let values = {

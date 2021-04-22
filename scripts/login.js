@@ -1,5 +1,5 @@
 function getUsers() {
-    const url = "https://localhost:5001/API/User";
+    const url = "https://mis321-backend.herokuapp.com/API/User";
 
     fetch(url).then(function(response){
         console.log(response);
