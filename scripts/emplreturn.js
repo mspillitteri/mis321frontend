@@ -5,7 +5,7 @@ function onLoad() {
 
 function findUserCheckouts() {
     const userid = localStorage.getItem("userid");
-    const url = "https://mis321-backend.herokuapp.com/API/Checkout";
+    const url = "https://mis321-backend.herokuapp.com/Checkout";
 
     fetch(url).then(function(response){
         console.log(response);
@@ -22,7 +22,7 @@ function findUserCheckouts() {
 
 function getReturnItems(checkout) {
     const userid = localStorage.getItem("userid");
-    const url = "https://mis321-backend.herokuapp.com/API/Item";
+    const url = "https://mis321-backend.herokuapp.com/Item";
 
     writeUserName();
 
@@ -50,7 +50,7 @@ function addReturn(checkout, itemid) {
 
     const userstat = localStorage.getItem("userstatus");
     const userid = localStorage.getItem("userid");
-    const url = "https://mis321-backend.herokuapp.com/API/Return/" + userid + "/" + userstat + "/" + itemid;
+    const url = "https://mis321-backend.herokuapp.com/Return/" + userid + "/" + userstat + "/" + itemid;
 
     fetch(url, {
         method: "POST",
