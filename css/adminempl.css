@@ -31,6 +31,7 @@
       font-family: "Roboto", sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;   
+      background-color: #6e0a1e;
     }
     
     div {
@@ -125,6 +126,7 @@
 
 .bold{
   font-family: serif;
+  font-weight: bold;
     color: black;
 
 }
