@@ -43,4 +43,10 @@ window.onclick = function(event)
     }
 }
 
+function writeUserName() {
+    const userName = localStorage.getItem("userName");
+    let html = "<p>Welcome " + userName + "</p>";
+    document.getElementById("welcomeuser").innerHTML = html;
+}
+
 
